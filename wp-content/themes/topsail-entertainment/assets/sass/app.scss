@@ -1,0 +1,110 @@
+/*!
+ * Roots 6.5.2
+ */
+
+$bootstrap-sass-asset-helper: false;
+@import "bootstrap/bootstrap";
+@import 'mixins';
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body { 
+   background: #fafafa;
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    color: white;
+    margin: 0;
+    width: 100%;
+}
+
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+@import 'nav';
+
+
+h1 {
+        width: 100%;
+        height: 500px;
+        text-align: center;
+        background: url(../img/topsail-logo-white.svg) no-repeat center;
+        background-size: contain;
+        text-shadow: 0 0 0 100px $body;
+        text-indent: -99999px;
+        padding: 15%;
+    } 
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { }
+
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { }
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { }
+
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info { }
+
+
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (min-width: $screen-sm-min) { }
+
+@media (min-width: $screen-md-min) { }
+
+@media (min-width: $screen-lg-min) { }

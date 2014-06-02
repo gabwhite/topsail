@@ -1,0 +1,263 @@
+/*=========================================
+=            FLEXSLIDER / ABOUT STYLES            =
+=========================================*/
+.about {
+        background: $background-opaque;
+        width: 100%;
+        
+        .container{
+            padding: 10%;
+        }
+
+        h2 {
+            @include h2;
+            margin: 2% 0;   
+            text-align: center;
+            color: $main-accent;
+         }
+
+         p {
+            @include body-text;
+         }
+}
+
+.carousel, .slider.small {
+	margin-bottom: 3%;
+}
+
+.slider.small {
+    display:none;
+}
+
+.flexslider {
+    background: none;
+    border: 0;
+}
+
+/*-----  End of FLEXSLIDER STYLES  ------*/
+/*====================================
+=            Work Section            =
+====================================*/
+.work .mr-d{
+    position: relative;
+}
+
+.left, .right {
+    width: 48%;
+    margin: 1%;
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.work-text {
+    padding: 2%;
+}
+
+.right.work-text {
+    h2, p {
+        color: $background-opaque;
+    }
+}
+
+.thumbnails {
+    display: block;
+}
+
+.carousel {
+    margin-top: 15%;
+}
+
+.thumbs {
+        width: 23%;
+        margin: 1%;
+        height: 100px;
+        float: left;
+        display: inline-block;
+        background: #ccc;
+    }
+
+.work {
+    h2 {
+        font-size: 7rem;
+        text-transform: uppercase;
+        line-height: 6rem;
+        margin: 1%;
+    }
+
+    p {
+        margin: 1%;
+        @include body-text;
+    }
+}
+
+.work.trailer-park {
+    background: url(images/trailer_park_boys_countdown_to_liquor_day_7_02.jpg) center;
+    background-size: cover;
+
+}
+
+.work.mr-d {
+    background: url(images/mr-d-classroom_02.jpg);
+    background-size: cover;
+}
+
+
+/*-----  End of Work Section  ------*/
+/*=======================================
+=            Contact Section            =
+=======================================*/
+.contact {
+   position: relative;
+   background: url(images/old_map.jpg);
+   background-size: cover;
+
+       .left {
+        width: 55%;
+        float: left;
+        margin: 2.5%;
+    }
+
+        .right {
+        width: 35%;
+        float: right;
+        margin: 2%;
+    }
+
+        h2, p {
+            margin: 1%;
+            text-align: left;
+        }
+}
+
+.contact-color {
+    width: 100%;
+    height: 100%;
+    background: $background-text;
+    position: relative;
+}
+
+.contact-color-light {
+    @extend .contact-color;
+    background: $background-text-light;
+}
+
+
+input[type="text"], textarea {
+    color: white;
+
+    &:focus {
+        color: white;
+    }
+}
+
+
+
+.ginput_container { 
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.top_label, input.medium, select.medium, textarea{
+    width: 100%;
+    display: block;
+    outline: 0;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid white;
+    box-shadow: 0;
+    //padding: 1.5%;
+    font-size: 1.6rem;
+    border-radius: 0;
+    color: white;
+    text-indent: 2%;
+}
+
+li.gfield:first-child, li.gfield:nth-child(2){
+    width: 50%;
+    float: left;
+    height: auto;
+    color: white;
+
+    input {
+        text-indent: 3%;
+    }
+
+    label {
+        padding: 4%;
+    }
+}
+
+textarea {
+    border-bottom: none;
+}
+
+li.gfield:first-child, li.gfield:nth-child(2) {
+    border-top: 2px solid white;
+    height: auto;
+}
+
+li.gfield:first-child .ginput_container {
+    border-right: none;
+}
+
+ul.gform_fields.top_label.description_below{
+    margin: 0;
+}
+
+.gform_footer{
+    text-indent: 0;
+    border: 0;
+}
+
+input[type="submit"]{
+    @include button;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 2rem;
+
+    &:hover {
+        @include button-hover;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+label.gfield_label {
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 400;
+    display: block;
+    float: left;
+    text-transform: uppercase; 
+    padding: 2%;  
+}
+
+/*-----  End of Contact Section  ------*/
+
+.sticky {
+}
+.hentry {
+	margin: 0;
+}
+.byline,
+.updated {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}

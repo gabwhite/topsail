@@ -1,0 +1,42 @@
+.navbar-header {
+    background-color: $background-text;
+    position: relative;
+    padding: 1%;
+    width: 100%;
+    margin: 0;
+
+    ul.nav {
+        list-style-type: none;
+        text-align: center; 
+        
+        li a.active {
+            color: white;
+            background: none;
+        } 
+
+        li {
+            display: inline;
+            padding: 0 2%;
+
+            a {
+                font-size: 1.2rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-decoration: none;
+                letter-spacing: 1px;
+                color: white;
+
+                &:hover {
+                    color: $link-hover;
+                }
+
+                &:focus {
+                    color: $link-hover;
+                }
+            }
+        }
+    }
+}
+
+
+

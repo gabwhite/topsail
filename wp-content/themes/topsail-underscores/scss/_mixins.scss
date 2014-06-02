@@ -1,0 +1,54 @@
+/*==============================
+=            Colors            =
+==============================*/
+
+$body : #202020;
+$main-accent : #d7b38a;
+$this-is-dark: #031634;
+$link-hover : $this-is-dark;
+$background-text : rgba(3,54,73, 0.65);
+$background-text-light: rgba(215,179,138,0.65);
+$background-opaque: #036564;
+
+/*-----  End of Colors  ------*/
+
+/*=============================
+=            FONTS            =
+=============================*/
+
+$body-font : "Abril Text", Georgia, serif;
+
+@mixin body-text {
+	font-family: $body-font;
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 1px;
+}
+
+/*-----  End of FONTS  ------*/
+
+h3 {
+	font-size: 1.5rem;
+}
+
+@mixin h2 {
+	font-size: 7rem;
+	font-family: "Proxima Nova", sans-serif;
+	text-transform: uppercase;
+}
+
+@mixin button {
+	border-radius: 0;
+	background: darken($background-opaque, 10%);
+	padding: 2%; 
+	color: white;
+	border: 0;
+	font-size: 1.6rem;
+	margin: 4% 0;
+	box-shadow: none;
+}
+
+@mixin button-hover {
+	background: $this-is-dark;
+	box-shadow: none;
+}

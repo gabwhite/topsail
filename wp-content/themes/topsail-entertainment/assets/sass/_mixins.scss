@@ -1,0 +1,28 @@
+$body : #202020;
+$main-accent : #d7b38a;
+$link-hover : #9fd9d1;
+$background-text :rgba(25,84,139,0.75);
+$background-opaque: rgba(25,84,139,1);
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+@mixin button {
+	border-radius: 0;
+	background: darken($background-opaque, 10%);
+	padding: 2%; 
+	color: white;
+	border: 0;
+	font-size: 1rem;
+	margin: 4% 0;
+}
+
+@mixin button-hover {
+	@extend .button;
+	background: darken($background-opaque, 20%);
+}

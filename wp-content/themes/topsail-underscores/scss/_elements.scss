@@ -1,0 +1,111 @@
+/*=====================================
+=            HEADER STYLES            =
+=====================================*/
+
+header {
+	position: relative;
+
+	.header-overlay {
+		background: $background-text;
+		position: absolute;
+		top: 0; 
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.container {
+		position: relative;
+		width: 80%;
+		margin: 0 auto;
+			
+			h1.site-title {
+		    min-height: 600px;
+		    text-align: center;
+		    background: url(images/topsail-logo-white.svg) no-repeat center;
+		    background-size: contain;
+		    text-indent: -99999px;
+		}
+	}
+}
+
+video, #video	 {
+ 	position: absolute; top: 0; left:0; bottom: 0;
+	min-width: 100%; 
+	width: auto; height: auto;
+	z-index: -100;
+}
+
+/*-----  End of HEADER STYLES  ------*/
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    padding: 5%;
+
+    li {
+        text-align: center;
+        list-style-type: none;
+        text-indent: 0;
+    }
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+
+
+/*=====================================
+=            Footer Styles            =
+=====================================*/
+footer {
+    background: $background-opaque;
+    padding: 2% 0;
+}
+
+.site-info.container {
+    float: left;
+    display: inline-block;
+    margin-left: 17%;
+    padding: 0;
+}
+
+
+/*-----  End of Footer Styles  ------*/
+
