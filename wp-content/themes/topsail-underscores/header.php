@@ -14,17 +14,20 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles/flexslider.css" type="text/css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script type="text/javascript" src="http://use.typekit.net/ega0vng.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.flexslider.js"></script>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="//use.typekit.net/ega0vng.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
+ <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancyBox/source/jquery.fancybox.pack.js"></script>
+
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fancyBox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancyBox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancyBox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fancyBox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancyBox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
 <?php wp_head(); ?>
@@ -42,7 +45,7 @@
 		<div class="container">
             <h1 class="site-title">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>                    
-                <img src="<?php echo get_template_directory_uri(); ?>/images/topsail-logo-white.svg" alt="Topsail Logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo-white-EDIT.svg" alt="Topsail Logo">
                 </a>
             </h1>
           </div> <!-- end container -->

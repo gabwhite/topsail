@@ -10,18 +10,24 @@ select,
 }
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	color: white;
+}
+h2 {
+	@include h2;
 }
 
-h2 {
-	font-size: 3rem;
-	font-weight: 700;
-	letter-spacing: 1px;
+h2.entry-title, h2.comments-title {
+	@extend h2;
+	font-size: 4rem;
+	text-transform: none;
+	color: $background-opaque;
+}
+
+h3 {
+	@include h3;
 }
 
 p {
 	font-size: 1.6rem;
-	color: white;
 }
 b, strong {
 	font-weight: bold;

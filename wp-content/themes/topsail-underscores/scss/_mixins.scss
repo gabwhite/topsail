@@ -3,12 +3,12 @@
 ==============================*/
 
 $body : #202020;
-$main-accent : #d7b38a;
-$this-is-dark: #031634;
-$link-hover : $this-is-dark;
-$background-text : rgba(3,54,73, 0.65);
-$background-text-light: rgba(215,179,138,0.65);
-$background-opaque: #036564;
+$main-accent : #cb5b21;
+$this-is-dark: #1C2130;
+$link-hover : darken($main-accent, 10%);
+$background-text : rgba(13,100,154,0.85); //denim bluey
+$background-text-light: rgba(203,91,33,0.85); //orangy
+$background-opaque: #0d649a;
 
 /*-----  End of Colors  ------*/
 
@@ -23,25 +23,36 @@ $body-font : "Abril Text", Georgia, serif;
     font-size: 2rem;
     line-height: 3rem;
     letter-spacing: 1px;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /*-----  End of FONTS  ------*/
 
-h3 {
+@mixin h3 {
+	font-family: "Proxima-Nova", sans-serif;
 	font-size: 1.5rem;
+	color: white;
+	text-transform: uppercase; 
+	letter-spacing: 2px; 
 }
 
 @mixin h2 {
 	font-size: 7rem;
-	font-family: "Proxima Nova", sans-serif;
-	text-transform: uppercase;
+	font-family: "Proxima-Nova", sans-serif;
+	//text-transform: uppercase;
+    font-weight: 700;
 }
+
+/*===============================
+=            Buttons            =
+===============================*/
 
 @mixin button {
 	border-radius: 0;
-	background: darken($background-opaque, 10%);
+	background: white;
 	padding: 2%; 
-	color: white;
+	color: $this-is-dark;
 	border: 0;
 	font-size: 1.6rem;
 	margin: 4% 0;
@@ -49,6 +60,60 @@ h3 {
 }
 
 @mixin button-hover {
-	background: $this-is-dark;
+	background: darken($background-opaque, 10%);
 	box-shadow: none;
+	color: white;
 }
+
+.myClose {
+	background: url(images/icon-close.svg);
+	background-size: contain;
+	position: absolute;
+	top: -50px;
+	right: -5px;
+	width: 40px;
+	height: 40px;
+}
+
+a.myNext {
+	background: url(images/right_arrow.png);
+	background-size: contain;
+	position: absolute;
+	top: 175px;
+	right: -80px;
+	width: 40px;
+	height: 40px;
+	opacity: 0;
+
+	&:hover {
+		right: -50px;
+		opacity: 1;
+		transition: right 0.5s;
+	}
+}
+
+.fancybox-nav:hover span{
+	visibility: hidden;
+}
+
+
+.myPrev {
+	background: url(images/left_arrow.png);
+	background-size: contain;
+	position: absolute;
+	top: 175px;
+	left: -80px;
+	width: 40px;
+	height: 40px;
+	opacity: 0;
+
+	&:hover {
+		left: -50px;
+		opacity: 1;
+		transition: right 0.5s;
+	}
+}
+/*-----  End of Buttons  ------*/
+
+
+

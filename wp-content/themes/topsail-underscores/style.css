@@ -1,5 +1,5 @@
 /*
-Theme Name: Doreen Frumkin Casting
+Theme Name: Topsail Entertainment
 Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
@@ -48,7 +48,7 @@ and Blueprint http://www.blueprintcss.org/
 1.0 - Reset
 --------------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h2.entry-title, h2.comments-title, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -140,9 +140,50 @@ a img {
 =            FONTS            =
 =============================*/
 /*-----  End of FONTS  ------*/
-h3 {
-  font-size: 1.5rem; }
+/*===============================
+=            Buttons            =
+===============================*/
+.myClose {
+  background: url(images/icon-close.svg);
+  background-size: contain;
+  position: absolute;
+  top: -50px;
+  right: -5px;
+  width: 40px;
+  height: 40px; }
 
+a.myNext {
+  background: url(images/right_arrow.png);
+  background-size: contain;
+  position: absolute;
+  top: 175px;
+  right: -80px;
+  width: 40px;
+  height: 40px;
+  opacity: 0; }
+  a.myNext:hover {
+    right: -50px;
+    opacity: 1;
+    transition: right 0.5s; }
+
+.fancybox-nav:hover span {
+  visibility: hidden; }
+
+.myPrev {
+  background: url(images/left_arrow.png);
+  background-size: contain;
+  position: absolute;
+  top: 175px;
+  left: -80px;
+  width: 40px;
+  height: 40px;
+  opacity: 0; }
+  .myPrev:hover {
+    left: -50px;
+    opacity: 1;
+    transition: right 0.5s; }
+
+/*-----  End of Buttons  ------*/
 /*--------------------------------------------------------------
 2.1 Typography
 --------------------------------------------------------------*/
@@ -155,18 +196,28 @@ select {
   margin: 0;
   max-width: 100%; }
 
-h1, h2, h3, h4, h5, h6 {
-  clear: both;
-  color: white; }
+h1, h2, h2.entry-title, h2.comments-title, h3, h4, h5, h6 {
+  clear: both; }
 
-h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 1px; }
+h2, h2.entry-title, h2.comments-title {
+  font-size: 7rem;
+  font-family: "Proxima-Nova", sans-serif;
+  font-weight: 700; }
+
+h2.entry-title, h2.comments-title {
+  font-size: 4rem;
+  text-transform: none;
+  color: #0d649a; }
+
+h3 {
+  font-family: "Proxima-Nova", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
 
 p {
-  font-size: 1.6rem;
-  color: white; }
+  font-size: 1.6rem; }
 
 b, strong {
   font-weight: bold; }
@@ -231,7 +282,7 @@ big {
 header {
   position: relative; }
   header .header-overlay {
-    background: rgba(3, 54, 73, 0.65);
+    background: rgba(13, 100, 154, 0.85);
     position: absolute;
     top: 0;
     left: 0;
@@ -242,9 +293,9 @@ header {
     width: 80%;
     margin: 0 auto; }
     header .container h1.site-title {
-      min-height: 600px;
-      text-align: center;
-      background: url(images/topsail-logo-white.svg) no-repeat center;
+      max-width: 700px;
+      margin: 0 auto;
+      background: url(images/logo-white-EDIT.svg) no-repeat center;
       background-size: contain;
       text-indent: -99999px; }
 
@@ -314,14 +365,15 @@ th {
 =            Footer Styles            =
 =====================================*/
 footer {
-  background: #036564;
+  background: #090b10;
   padding: 2% 0; }
 
 .site-info.container {
   float: left;
   display: inline-block;
   margin-left: 17%;
-  padding: 0; }
+  padding: 0;
+  color: white; }
 
 /*-----  End of Footer Styles  ------*/
 /*--------------------------------------------------------------
@@ -436,20 +488,6 @@ textarea {
 5.0 Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-5.1 Links
---------------------------------------------------------------*/
-a {
-  color: royalblue; }
-
-a:visited {
-  color: purple; }
-
-a:hover,
-a:focus,
-a:active {
-  color: midnightblue; }
-
-/*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
 html, body {
@@ -459,20 +497,26 @@ nav.main-navigation {
   clear: both;
   display: block;
   width: 100%;
-  padding: 2%;
   margin: 0;
   background: white;
   z-index: 99999; }
 
 .fixed {
   position: fixed;
-  bottom: 0; }
+  bottom: 0;
+  padding: 2%; }
 
 .relative {
-  position: relative; }
+  position: relative;
+  padding: 2%;
+  transition: padding 0.5s;
+  -webkit-transition: padding 0.5s; }
 
 .sticky {
+  transition: padding 0.5s;
+  -webkit-transition: padding 0.5s;
   position: fixed;
+  padding: 1%;
   width: 100%;
   left: 0;
   top: 0;
@@ -494,11 +538,11 @@ nav.main-navigation a {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
-  color: #036564; }
+  color: #0d649a; }
   nav.main-navigation a:hover {
-    color: #031634; }
+    color: #9f471a; }
   nav.main-navigation a:focus {
-    color: #031634; }
+    color: #9f471a; }
 
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -776,89 +820,112 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 10.1 Posts and pages
 --------------------------------------------------------------*/
 /*=========================================
-=            FLEXSLIDER / ABOUT STYLES            =
+=             ABOUT STYLES            =
 =========================================*/
 .about {
-  background: #036564;
+  background: #1c2130;
   width: 100%; }
   .about .container {
     padding: 10%; }
   .about h2 {
     font-size: 7rem;
-    font-family: "Proxima Nova", sans-serif;
-    text-transform: uppercase;
+    font-family: "Proxima-Nova", sans-serif;
+    font-weight: 700;
     margin: 2% 0;
     text-align: center;
-    color: #d7b38a; }
+    color: white; }
   .about p {
     font-family: "Abril Text", Georgia, serif;
     font-size: 2rem;
     line-height: 3rem;
-    letter-spacing: 1px; }
-
-.carousel, .slider.small {
-  margin-bottom: 3%; }
-
-.slider.small {
-  display: none; }
-
-.flexslider {
-  background: none;
-  border: 0; }
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-style: normal;
+    color: white; }
 
 /*-----  End of FLEXSLIDER STYLES  ------*/
 /*====================================
 =            Work Section            =
 ====================================*/
-.work .mr-d {
+/*==========  lightbox comment block  ==========*/
+.full-width-thumbs {
+  width: 100%;
+  margin: 0;
   position: relative; }
+
+ul.trailer-thumbs {
+  text-indent: 0;
+  width: 100%;
+  margin: 0; }
+  ul.trailer-thumbs li {
+    display: inline; }
+    ul.trailer-thumbs li a img {
+      width: 34.9%;
+      margin: -1%;
+      position: relative;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale;
+      transition: 1s; }
+    ul.trailer-thumbs li a:hover img {
+      -webkit-filter: grayscale(0);
+      filter: none; }
+
+/*==========  lightbox comment block  ==========*/
+.work {
+  position: relative;
+  min-height: 700px; }
 
 .left, .right {
   width: 48%;
   margin: 1%;
   float: left; }
+  .left p, .right p {
+    color: white; }
 
 .right {
   float: right; }
-
-.work-text {
-  padding: 2%; }
-
-.right.work-text h2, .right.work-text p {
-  color: #036564; }
-
-.thumbnails {
-  display: block; }
-
-.carousel {
-  margin-top: 15%; }
-
-.thumbs {
-  width: 23%;
-  margin: 1%;
-  height: 100px;
-  float: left;
-  display: inline-block;
-  background: #ccc; }
+  .right h2 {
+    color: white; }
+  .right h3 {
+    background: rgba(159, 71, 26, 0.85);
+    padding: 2%;
+    display: inline-block;
+    margin-bottom: 5%; }
 
 .work h2 {
   font-size: 7rem;
-  text-transform: uppercase;
-  line-height: 6rem;
-  margin: 1%; }
+  font-family: "Proxima-Nova", sans-serif;
+  font-weight: 700;
+  margin-bottom: 8%;
+  line-height: 6rem; }
 .work p {
   margin: 1%;
   font-family: "Abril Text", Georgia, serif;
   font-size: 2rem;
   line-height: 3rem;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-style: normal; }
+
+.work-text {
+  padding: 2%; }
+
+.left.work-text h2 {
+  color: white; }
+.left.work-text h3 {
+  background: rgba(9, 69, 107, 0.85);
+  padding: 2%;
+  display: inline-block;
+  margin-bottom: 5%; }
 
 .work.trailer-park {
-  background: url(images/trailer_park_boys_countdown_to_liquor_day_7_02.jpg) center;
+  background: url(images/tpb-background.png) top;
+  background-attachment: fixed;
   background-size: cover; }
 
 .work.mr-d {
-  background: url(images/mr-d-classroom_02.jpg);
+  background: url(images/mrd-background.png) center;
+  background-attachment: fixed;
   background-size: cover; }
 
 /*-----  End of Work Section  ------*/
@@ -866,29 +933,30 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 =            Contact Section            =
 =======================================*/
 .contact {
-  position: relative;
-  background: url(images/old_map.jpg);
-  background-size: cover; }
+  background: url(images/old_map.png);
+  background-size: cover;
+  width: 100%; }
   .contact .left {
-    width: 55%;
+    width: 45%;
     float: left;
     margin: 2.5%; }
   .contact .right {
     width: 35%;
     float: right;
-    margin: 2%; }
-  .contact h2, .contact p {
-    margin: 1%;
-    text-align: left; }
-
-.contact-color, .contact-color-light {
-  width: 100%;
-  height: 100%;
-  background: rgba(3, 54, 73, 0.65);
-  position: relative; }
-
-.contact-color-light {
-  background: rgba(215, 179, 138, 0.65); }
+    margin: 2.5%; }
+  .contact h2 {
+    margin: 1% 0;
+    text-align: left;
+    color: white;
+    margin-bottom: 10%; }
+  .contact p {
+    font-family: "Abril Text", Georgia, serif;
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-style: normal;
+    color: white; }
 
 input[type="text"], textarea {
   color: white; }
@@ -941,9 +1009,9 @@ ul.gform_fields.top_label.description_below {
 
 input[type="submit"] {
   border-radius: 0;
-  background: #023333;
+  background: white;
   padding: 2%;
-  color: white;
+  color: #1c2130;
   border: 0;
   font-size: 1.6rem;
   margin: 4% 0;
@@ -952,8 +1020,9 @@ input[type="submit"] {
   text-transform: uppercase;
   font-size: 2rem; }
   input[type="submit"]:hover {
-    background: #031634;
-    box-shadow: none; }
+    background: #09456b;
+    box-shadow: none;
+    color: white; }
   input[type="submit"]:focus {
     outline: 0; }
 

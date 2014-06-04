@@ -19,7 +19,7 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
-
+	<div class="container clearfix">
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
@@ -65,5 +65,5 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 
 	<?php comment_form(); ?>
-
+	</div> <!-- clearfix container -->
 </div><!-- #comments -->

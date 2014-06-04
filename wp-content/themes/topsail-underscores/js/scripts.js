@@ -1,7 +1,7 @@
 
 // DOC READY
 $(function(){
-	var num = 600; //number of pixels before modifying styles
+	var num = 800; //number of pixels before modifying styles
 
 $(window).on('scroll', function () {
     $("nav.main-navigation").removeClass("fixed");
@@ -15,43 +15,30 @@ $(window).on('scroll', function () {
     }
 });
 
-
-	$('.carousel').flexslider({
-    animation: "slide",
-    controlNav: false,
-    animationLoop: false,
-    slideshow: false,
-    itemWidth: 210,
-    itemMargin: 5,
-    asNavFor: '#slider'
-  });
-   
-  $('.slider').flexslider({
-    animation: "slide",
-    controlNav: false,
-    animationLoop: false,
-    slideshow: false,
-    sync: "#carousel"
-  });
-
   if ( ($(window).width() > 800)) {
 
                 $('#videobox').html('<video autobuffer autoplay loop id="thevideo"><source src="http://localhost:8888/topsail/wp-content/themes/topsail-underscores/images/Trailer-Park-Boys-Season-8.mp4" type="video/mp4; codecs=avc1.42E01E,mp4a.40.2" /><source src="hhttp://localhost:8888/topsail/wp-content/themes/topsail-underscores/images/Trailer-Park-Boys-Season-8.ogv" type="video/ogv; codecs=theora,vorbis" /><source src="http://localhost:8888/topsail/wp-content/themes/topsail-underscores/images/Trailer-Park-Boys-Season-8.webm" type="video/webm; codecs=vp8,vorbis" /></video>');
         }
 
 
-   
-  $(".fancybox").fancybox({
+  $(".fancybox")
+  .attr('rel', 'gallery')
+
+  .fancybox({
+  	padding: 0,
   	helpers : {
   		overlay : {
   			css : {
   				"background" : "rgba(3,54,73, 0.65)"
   			},
-		locked: false
-   
+		  locked: false
   		}
-
-  	}
+  	},
+  	tpl: {
+        closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>',
+        next     : '<a title="Next" class="fancybox-nav fancybox-next myNext" href="javascript:;"><span></span></a>',
+		prev     : '<a title="Previous" class="fancybox-nav fancybox-prev myPrev" href="javascript:;"><span></span></a>'
+    }	
   });
 
 

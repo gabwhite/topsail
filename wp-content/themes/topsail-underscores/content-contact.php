@@ -7,7 +7,6 @@
 ?>
 <div id="contact" class="contact clearfix">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="contact-color">
 		<div class="entry-content">
             <div class="container clearfix">
                 <div class="right">
@@ -20,7 +19,6 @@
                 </div> <!-- end left -->
             </div> <!-- end the container -->		
         </div> <!-- .entry-content -->
-    </div> <!-- end of contact color -->
 		
 		
 	</article><!-- #post-## -->

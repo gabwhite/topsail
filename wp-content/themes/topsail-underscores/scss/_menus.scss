@@ -6,7 +6,6 @@ nav.main-navigation {
 	clear: both;
 	display: block;
 	width: 100%;
-	padding: 2%;
     margin: 0;
 	background: white;
 	z-index: 99999;
@@ -15,14 +14,23 @@ nav.main-navigation {
 .fixed {
 	position: fixed;
 	bottom: 0;
+	padding: 2%;
 }
 
 .relative {
 	position: relative;
+	padding: 2%;
+	transition: padding 0.5s;
+	-webkit-transition: padding 0.5s;
 }
 
+
+
 .sticky {  
+	transition: padding 0.5s;
+	-webkit-transition: padding 0.5s;
     position: fixed;  
+    padding: 1%;
     width: 100%;  
     left: 0;  
     top: 0;   

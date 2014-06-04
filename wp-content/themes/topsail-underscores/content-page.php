@@ -12,14 +12,16 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<div class="container clearfix">
 		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', '_s' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', '_s' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
+	</div>
 	<footer class="entry-footer">
 		<?php edit_post_link( __( 'Edit', '_s' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->

@@ -6,24 +6,27 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-			<?php _s_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		<div class="container clearfix">
+			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+			<div class="entry-meta">
+				<?php _s_posted_on(); ?>
+			</div><!-- .entry-meta -->
+		</div> <!-- end container -->
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', '_s' ),
-				'after'  => '</div>',
-			) );
-		?>
+		<div class="container clearfix">
+			<?php the_content(); ?>
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', '_s' ),
+					'after'  => '</div>',
+				) );
+			?>	
+		</div> <!-- end container -->
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-footer container">
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$category_list = get_the_category_list( __( ', ', '_s' ) );
