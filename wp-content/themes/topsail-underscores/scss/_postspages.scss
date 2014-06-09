@@ -2,24 +2,43 @@
 =             ABOUT STYLES            =
 =========================================*/
 .about {
-        background: $this-is-dark;
-        width: 100%;
-        
-        .container{
-            padding: 10%;
-        }
+    background: $this-is-dark;
+    width: 100%;
+    
+    .container{
+        padding: 10%;
+    }
 
-        h2 {
-            @include h2;
-            margin: 2% 0;   
-            text-align: center;
-            color: white;
-         }
+    h2 {
+        @include h2;
+        margin: 2% 0;   
+        text-align: center;
+        color: white;
+     }
 
-         p {
-            @include body-text;
-            color: white;
-         }
+     p {
+        @include body-text;
+        color: white;
+     }
+}
+
+.recent-post {
+    text-align: center;
+    margin-top: 5%;
+
+    p { 
+        @include h3;
+        background: darken($this-is-dark, 10%);
+        display: inline-block;
+        padding: 2%;
+    
+    a {
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    }
 }
 
 
@@ -130,14 +149,14 @@ ul.trailer-thumbs {
 
 .work.trailer-park {
     background: url(images/tpb-background.png) top;
-    background-attachment: fixed;
+    //background-attachment: fixed;
     background-size: cover;
 
 }
 
 .work.mr-d {
     background: url(images/mrd-background.png) center;
-    background-attachment: fixed;
+    //background-attachment: fixed;
     background-size: cover;
 }
 
@@ -179,99 +198,83 @@ ul.trailer-thumbs {
 
 
 
-
-input[type="text"], textarea {
-    color: white;
-
-    &:focus {
-        color: white;
-    }
-}
-
-
-
-.ginput_container { 
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-}
-
-.top_label, input.medium, select.medium, textarea{
-    width: 100%;
-    display: block;
-    outline: 0;
-    background: none;
-    border: 0;
-    border-bottom: 2px solid white;
-    box-shadow: 0;
-    font-size: 1.6rem;
-    border-radius: 0;
-    color: white;
-    text-indent: 2%;
-}
-
-li.gfield:first-child, li.gfield:nth-child(2){
-    width: 50%;
-    float: left;
-    height: auto;
-    color: white;
-
-    input {
-        text-indent: 3%;
-    }
-
-    label {
-        padding: 4%;
-    }
-}
-
-textarea {
-    border-bottom: none;
-}
-
-li.gfield:first-child, li.gfield:nth-child(2) {
-    border-top: 2px solid white;
-    height: auto;
-}
-
-li.gfield:first-child .ginput_container {
-    border-right: none;
-}
-
-ul.gform_fields.top_label.description_below{
-    margin: 0;
-}
-
-.gform_footer{
-    text-indent: 0;
-    border: 0;
-}
-
-input[type="submit"]{
-    @include button;
-    width: 100%;
-    text-transform: uppercase;
-    font-size: 2rem;
-
-    &:hover {
-        @include button-hover;
-    }
-
-    &:focus {
-        outline: 0;
-    }
-}
-
-label.gfield_label {
-    font-size: 1.6rem;
-    color: white;
-    font-weight: 400;
-    display: block;
-    float: left;
-    text-transform: uppercase; 
-    padding: 2%;  
-}
-
 /*-----  End of Contact Section  ------*/
+
+/*=============================================
+=            Single page blog post            =
+=============================================*/
+
+header.entry-header {
+    background: white;
+    padding: 2% 5%;
+    margin-top: 5%;
+    text-align: center;
+
+    .entry-meta {
+        @include h3;
+        background: $main-accent;
+        padding: 1%;
+        font-size: 1.2rem;
+        margin: 1% 0; 
+        
+        
+        a {
+            color: white;
+            text-decoration: none;
+
+            &:hover{
+                color: $background-opaque;
+            }
+        }
+    }
+}
+
+.container.blog  {
+    padding: 1%;
+}
+
+.entry-content.blog {
+    background: white;
+    padding: 7.5%;
+
+    h3 {
+        font-family: $body-font;
+        font-size: 3rem;
+        line-height: 4rem;
+        color: $main-accent;
+        text-transform: none;
+        letter-spacing: 0;
+        margin-bottom: 3%;
+    }
+
+    p {
+        @include body-text;
+        color: $body;
+        margin: 2% 0;
+    }
+}
+
+.post-nav {
+    margin: 4% 0 0 0; 
+
+    a {
+        color: $main-accent;
+        font-family: $body-font;
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+            color: $background-opaque;
+        }
+    }
+}
+
+
+/*-----  End of Single page blog post  ------*/
+
+
+
 
 .sticky {
 }

@@ -2,13 +2,14 @@
 =            Colors            =
 ==============================*/
 
-$body : #202020;
+$body : #636363;
 $main-accent : #cb5b21;
 $this-is-dark: #1C2130;
 $link-hover : darken($main-accent, 10%);
 $background-text : rgba(13,100,154,0.85); //denim bluey
 $background-text-light: rgba(203,91,33,0.85); //orangy
 $background-opaque: #0d649a;
+$body-background: #ebebeb;
 
 /*-----  End of Colors  ------*/
 
@@ -35,6 +36,7 @@ $body-font : "Abril Text", Georgia, serif;
 	color: white;
 	text-transform: uppercase; 
 	letter-spacing: 2px; 
+	display: inline-block;
 }
 
 @mixin h2 {
@@ -86,9 +88,8 @@ a.myNext {
 	opacity: 0;
 
 	&:hover {
-		right: -50px;
 		opacity: 1;
-		transition: right 0.5s;
+		transition: opacity 0.5s;
 	}
 }
 

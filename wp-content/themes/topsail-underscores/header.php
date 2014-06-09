@@ -19,15 +19,16 @@
 <script type="text/javascript" src="//use.typekit.net/ega0vng.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
- <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancyBox/source/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fancyBox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancyBox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancyBox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fancyBox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancyBox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
 <?php wp_head(); ?>
@@ -49,12 +50,13 @@
                 </a>
             </h1>
           </div> <!-- end container -->
-         <nav id="site-navigation" class="main-navigation fixed" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', '_s' ); ?></button>
-			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'topsail-entertaiment' ); ?></a>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation --> 
 	</header><!-- #masthead -->
+     
+     <nav id="site-navigation" class="main-navigation fixed" role="navigation">
+		<button class="menu-toggle"><?php _e( 'Primary Menu', '_s' ); ?></button>
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'topsail-entertaiment' ); ?></a>
+
+		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+	</nav><!-- #site-navigation --> 
 	
 	<div id="content" class="site-content">

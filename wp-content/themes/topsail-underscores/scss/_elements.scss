@@ -4,7 +4,9 @@
 
 header {
 	position: relative;
-
+	max-height: 900px;
+	overflow: hidden;
+	
 	.header-overlay {
 		background: $background-text;
 		position: absolute;
@@ -94,7 +96,7 @@ th {
 /*=====================================
 =            Footer Styles            =
 =====================================*/
-footer {
+footer.site-footer {
     background: darken($this-is-dark, 10%);
     padding: 2% 0;
 }
@@ -107,6 +109,19 @@ footer {
     color: white;
 }
 
+.copyright, .logo {
+	width: 33%;
+	display: inline-block;
+}
+
+.copyright {
+	padding-top: 2%;
+}
+
+.logo {
+	float: right;
+	padding: 0 5%;
+}
 
 /*-----  End of Footer Styles  ------*/
 

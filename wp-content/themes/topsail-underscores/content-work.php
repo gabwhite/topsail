@@ -24,7 +24,7 @@
                 <?php while(has_sub_field("show_images")) : ?>
                 <?php $img = get_sub_field("image"); ?>
                 <li>
-                    <a class="fancybox" href="<?php echo $img?>">
+                    <a class="fancybox" rel="gallery" href="<?php echo $img?>">
                     <img src="<?php echo $img; ?>"></a>
                 </li>
                 <?php endwhile; ?>

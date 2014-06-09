@@ -5,17 +5,17 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<div class="container clearfix">
+	<div class="container blog clearfix">
+		<header class="entry-header">
 			<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 			<div class="entry-meta">
 				<?php _s_posted_on(); ?>
 			</div><!-- .entry-meta -->
-		</div> <!-- end container -->
-	</header><!-- .entry-header -->
+		</header><!-- .entry-header -->
+	</div> <!-- end container -->
 
-	<div class="entry-content">
-		<div class="container clearfix">
+		<div class="container blog clearfix">
+			<div class="entry-content blog">
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(
@@ -23,10 +23,14 @@
 					'after'  => '</div>',
 				) );
 			?>	
+			<div class="post-nav">
+				<?php _s_post_nav(); ?>
+			</div>
+		
 		</div> <!-- end container -->
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer container">
+	<footer class="entry-footer container blog">
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$category_list = get_the_category_list( __( ', ', '_s' ) );

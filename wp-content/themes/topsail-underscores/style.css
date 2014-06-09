@@ -162,9 +162,8 @@ a.myNext {
   height: 40px;
   opacity: 0; }
   a.myNext:hover {
-    right: -50px;
     opacity: 1;
-    transition: right 0.5s; }
+    transition: opacity 0.5s; }
 
 .fancybox-nav:hover span {
   visibility: hidden; }
@@ -190,7 +189,7 @@ a.myNext {
 body,
 button,
 select {
-  background: #fafafa;
+  background: #ebebeb;
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   margin: 0;
@@ -214,7 +213,8 @@ h3 {
   font-size: 1.5rem;
   color: white;
   text-transform: uppercase;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  display: inline-block; }
 
 p {
   font-size: 1.6rem; }
@@ -280,7 +280,9 @@ big {
 =            HEADER STYLES            =
 =====================================*/
 header {
-  position: relative; }
+  position: relative;
+  max-height: 900px;
+  overflow: hidden; }
   header .header-overlay {
     background: rgba(13, 100, 154, 0.85);
     position: absolute;
@@ -364,7 +366,7 @@ th {
 /*=====================================
 =            Footer Styles            =
 =====================================*/
-footer {
+footer.site-footer {
   background: #090b10;
   padding: 2% 0; }
 
@@ -374,6 +376,17 @@ footer {
   margin-left: 17%;
   padding: 0;
   color: white; }
+
+.copyright, .logo {
+  width: 33%;
+  display: inline-block; }
+
+.copyright {
+  padding-top: 2%; }
+
+.logo {
+  float: right;
+  padding: 0 5%; }
 
 /*-----  End of Footer Styles  ------*/
 /*--------------------------------------------------------------
@@ -484,6 +497,87 @@ textarea {
   /* Improves readability and alignment in all browsers */
   width: 98%; }
 
+/*======================================================
+=            Contact form on bottom of page            =
+======================================================*/
+input[type="text"], textarea {
+  color: white; }
+  input[type="text"]:focus, textarea:focus {
+    color: white; }
+
+.ginput_container {
+  border-left: 2px solid white;
+  border-right: 2px solid white; }
+
+.top_label, input.medium, select.medium, textarea {
+  width: 100%;
+  display: block;
+  outline: 0;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid white;
+  box-shadow: 0;
+  font-size: 1.6rem;
+  border-radius: 0;
+  color: white;
+  text-indent: 2%; }
+
+li.gfield:first-child, li.gfield:nth-child(2) {
+  width: 50%;
+  float: left;
+  height: auto;
+  color: white; }
+  li.gfield:first-child input, li.gfield:nth-child(2) input {
+    text-indent: 3%; }
+  li.gfield:first-child label, li.gfield:nth-child(2) label {
+    padding: 4%; }
+
+textarea {
+  border-bottom: none; }
+
+li.gfield:first-child, li.gfield:nth-child(2) {
+  border-top: 2px solid white;
+  height: auto; }
+
+li.gfield:first-child .ginput_container {
+  border-right: none; }
+
+ul.gform_fields.top_label.description_below {
+  margin: 0; }
+
+.gform_footer {
+  text-indent: 0;
+  border: 0; }
+
+input[type="submit"] {
+  border-radius: 0;
+  background: white;
+  padding: 2%;
+  color: #1c2130;
+  border: 0;
+  font-size: 1.6rem;
+  margin: 4% 0;
+  box-shadow: none;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 2rem; }
+  input[type="submit"]:hover {
+    background: #09456b;
+    box-shadow: none;
+    color: white; }
+  input[type="submit"]:focus {
+    outline: 0; }
+
+label.gfield_label {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 400;
+  display: block;
+  float: left;
+  text-transform: uppercase;
+  padding: 2%; }
+
+/*-----  End of Contact form on bottom of page  ------*/
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
@@ -843,6 +937,24 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     font-style: normal;
     color: white; }
 
+.recent-post {
+  text-align: center;
+  margin-top: 5%; }
+  .recent-post p {
+    font-family: "Proxima-Nova", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    background: #090b10;
+    display: inline-block;
+    padding: 2%; }
+    .recent-post p a {
+      color: white;
+      font-weight: 700;
+      text-decoration: none; }
+
 /*-----  End of FLEXSLIDER STYLES  ------*/
 /*====================================
 =            Work Section            =
@@ -920,12 +1032,10 @@ ul.trailer-thumbs {
 
 .work.trailer-park {
   background: url(images/tpb-background.png) top;
-  background-attachment: fixed;
   background-size: cover; }
 
 .work.mr-d {
   background: url(images/mrd-background.png) center;
-  background-attachment: fixed;
   background-size: cover; }
 
 /*-----  End of Work Section  ------*/
@@ -958,84 +1068,68 @@ ul.trailer-thumbs {
     font-style: normal;
     color: white; }
 
-input[type="text"], textarea {
-  color: white; }
-  input[type="text"]:focus, textarea:focus {
-    color: white; }
-
-.ginput_container {
-  border-left: 2px solid white;
-  border-right: 2px solid white; }
-
-.top_label, input.medium, select.medium, textarea {
-  width: 100%;
-  display: block;
-  outline: 0;
-  background: none;
-  border: 0;
-  border-bottom: 2px solid white;
-  box-shadow: 0;
-  font-size: 1.6rem;
-  border-radius: 0;
-  color: white;
-  text-indent: 2%; }
-
-li.gfield:first-child, li.gfield:nth-child(2) {
-  width: 50%;
-  float: left;
-  height: auto;
-  color: white; }
-  li.gfield:first-child input, li.gfield:nth-child(2) input {
-    text-indent: 3%; }
-  li.gfield:first-child label, li.gfield:nth-child(2) label {
-    padding: 4%; }
-
-textarea {
-  border-bottom: none; }
-
-li.gfield:first-child, li.gfield:nth-child(2) {
-  border-top: 2px solid white;
-  height: auto; }
-
-li.gfield:first-child .ginput_container {
-  border-right: none; }
-
-ul.gform_fields.top_label.description_below {
-  margin: 0; }
-
-.gform_footer {
-  text-indent: 0;
-  border: 0; }
-
-input[type="submit"] {
-  border-radius: 0;
-  background: white;
-  padding: 2%;
-  color: #1c2130;
-  border: 0;
-  font-size: 1.6rem;
-  margin: 4% 0;
-  box-shadow: none;
-  width: 100%;
-  text-transform: uppercase;
-  font-size: 2rem; }
-  input[type="submit"]:hover {
-    background: #09456b;
-    box-shadow: none;
-    color: white; }
-  input[type="submit"]:focus {
-    outline: 0; }
-
-label.gfield_label {
-  font-size: 1.6rem;
-  color: white;
-  font-weight: 400;
-  display: block;
-  float: left;
-  text-transform: uppercase;
-  padding: 2%; }
-
 /*-----  End of Contact Section  ------*/
+/*=============================================
+=            Single page blog post            =
+=============================================*/
+header.entry-header {
+  background: white;
+  padding: 2% 5%;
+  margin-top: 5%;
+  text-align: center; }
+  header.entry-header .entry-meta {
+    font-family: "Proxima-Nova", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    background: #cb5b21;
+    padding: 1%;
+    font-size: 1.2rem;
+    margin: 1% 0; }
+    header.entry-header .entry-meta a {
+      color: white;
+      text-decoration: none; }
+      header.entry-header .entry-meta a:hover {
+        color: #0d649a; }
+
+.container.blog {
+  padding: 1%; }
+
+.entry-content.blog {
+  background: white;
+  padding: 7.5%; }
+  .entry-content.blog h3 {
+    font-family: "Abril Text", Georgia, serif;
+    font-size: 3rem;
+    line-height: 4rem;
+    color: #cb5b21;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: 3%; }
+  .entry-content.blog p {
+    font-family: "Abril Text", Georgia, serif;
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-style: normal;
+    color: #636363;
+    margin: 2% 0; }
+
+.post-nav {
+  margin: 4% 0 0 0; }
+  .post-nav a {
+    color: #cb5b21;
+    font-family: "Abril Text", Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none; }
+    .post-nav a:hover {
+      color: #0d649a; }
+
+/*-----  End of Single page blog post  ------*/
 .hentry {
   margin: 0; }
 
