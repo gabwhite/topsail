@@ -8,7 +8,7 @@ nav.main-navigation {
 	width: 100%;
     margin: 0;
 	background: white;
-	z-index: 99999;
+	z-index: 10;
 }
 
 .fixed {
@@ -17,14 +17,12 @@ nav.main-navigation {
 	padding: 2%;
 }
 
-.relative {
-	position: relative;
+.absolute {
+	position: absolute;
+	bottom:0;
 	padding: 2%;
-	transition: padding 0.5s;
-	-webkit-transition: padding 0.5s;
+	
 }
-
-
 
 .sticky {  
 	transition: padding 0.5s;
@@ -35,7 +33,7 @@ nav.main-navigation {
     left: 0;  
     top: 0;   
     border-top: 0;  
-    z-index: 999999;
+    z-index: 11;
 }  
 
 nav.main-navigation ul {
@@ -53,7 +51,7 @@ nav.main-navigation a {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 1px;
-	color: $background-opaque;
+	color: $body;
 
     &:hover {
 	        color: $link-hover;
@@ -70,7 +68,7 @@ nav.main-navigation a {
 	left: 0;
 	position: absolute;
 	top: 1.5em;
-	z-index: 99999;
+	z-index: 11;
 }
 .main-navigation ul ul ul {
 	left: 100%;
@@ -93,20 +91,37 @@ nav.main-navigation a {
 .main-navigation .current_page_item a,
 .main-navigation .current-menu-item a {
 }
-/* Small menu */
+
+
+/*=============================================
+=            Small Menu            =
+=============================================*/
 .menu-toggle {
 	display: none;
 }
 @media screen and (max-width: 600px) {
+
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
+		@include h3;
 		display: block;
+		background: none;
+		box-shadow: none;
+		border: 0;
+		color: $background-opaque;
+		margin: 0 auto;
+		font-size: 2rem;
 	}
 
 	.main-navigation ul {
 		display: none;
 	}
 }
+
+/*-----  End of Section comment block  ------*/
+
+
+
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {

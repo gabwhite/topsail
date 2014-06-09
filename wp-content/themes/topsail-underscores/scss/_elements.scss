@@ -3,35 +3,46 @@
 =====================================*/
 
 header {
-	position: relative;
 	max-height: 900px;
-	overflow: hidden;
-	
-	.header-overlay {
-		background: $background-text;
+	position: relative;
+
+	.container {
 		position: absolute;
-		top: 0; 
-		left: 0;
 		width: 100%;
 		height: 100%;
-	}
-	.container {
-		position: relative;
-		width: 80%;
-		margin: 0 auto;
+		top: 0;
+		bottom: 0;
+		padding-top: 2%;
+		background: $background-text;
 			
 			h1.site-title {
-		    max-width: 700px;
+		    max-width: 500px;
 		    margin: 0 auto;
 		    background: url(images/logo-white-EDIT.svg) no-repeat center;
 		    background-size: contain;
 		    text-indent: -99999px;
+		    padding-bottom: 8%;
+			border-bottom: 5px solid white;
+
+		}
+
+		.tagline {
+			text-align:center;
+			color: white;
+			font-size: 2.2rem;
+			line-height: 4rem;
+			padding: 5% 10%; 
+
 		}
 	}
 }
 
+.header-widget {
+	max-height: 875px;
+	overflow: hidden;
+}
+
 video, #video	 {
- 	position: absolute; top: 0; left:0; bottom: 0;
 	min-width: 100%; 
 	width: auto; height: auto;
 	z-index: -100;
@@ -43,6 +54,7 @@ video, #video	 {
     margin: 0 auto;
     width: 80%;
     padding: 5%;
+    position: relative;
 
     li {
         text-align: center;
@@ -98,14 +110,13 @@ th {
 =====================================*/
 footer.site-footer {
     background: darken($this-is-dark, 10%);
-    padding: 2% 0;
 }
 
 .site-info.container {
     float: left;
     display: inline-block;
-    margin-left: 17%;
-    padding: 0;
+    margin-left: 10%;
+    padding: 1%;
     color: white;
 }
 
@@ -115,12 +126,12 @@ footer.site-footer {
 }
 
 .copyright {
-	padding-top: 2%;
+	padding-top: 1%;
 }
 
 .logo {
 	float: right;
-	padding: 0 5%;
+	max-width: 200px;
 }
 
 /*-----  End of Footer Styles  ------*/

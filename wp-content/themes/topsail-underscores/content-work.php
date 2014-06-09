@@ -7,17 +7,17 @@
 ?>
 
 
-		<div id="work" class="work trailer-park">
-            
-                <div class="container clearfix">
-                    <div class="right work-text">
-                        <h2><?php echo get_the_title(); ?></h2>
-                        <h3><?php echo get_field('show_dates') ?></h3>
-                        <?php the_content(); ?>
-                        
-                    </div> <!-- end of right -->
-                </div>
-        </div> <!-- end of trailer park work -->
+            <div id="productions" class="work trailer-park">
+      
+               <div class="container clearfix">
+                   <div class="right work-text">
+                       <h2><?php echo get_the_title(); ?></h2>
+                       <h3><?php echo get_field('show_dates') ?></h3>
+                       <?php the_content(); ?>
+                   </div> <!-- end of right -->
+               </div> <!-- end of container -->
+        
+            </div> <!-- end of trailer park work -->
 
         <div class="full-width-thumb">
             <ul class="trailer-thumbs">

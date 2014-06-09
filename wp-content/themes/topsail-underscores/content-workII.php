@@ -5,15 +5,16 @@
  * @package _s
  */
 ?>
-		<div id="work" class="work mr-d">
-
+		<div class="work mr-d">
+            
                <div class="container clearfix">
                     <div class="left work-text">
                         <h2><?php echo get_the_title(); ?></h2>
                         <h3><?php echo get_field('show_dates') ?></h3>
                         <?php the_content(); ?>
                     </div> <!-- end of right -->
-                </div>
+                </div> <!-- end of container -->
+           
         </div> <!-- end of Mr d work -->
         <div class="full-width-thumb">
             <ul class="trailer-thumbs">

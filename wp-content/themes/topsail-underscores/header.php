@@ -39,9 +39,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="header-widget">
-			<div class="header-overlay">
-				<?php dynamic_sidebar('extra-widget-area'); ?>
-			</div>
+			<?php dynamic_sidebar('extra-widget-area'); ?>
 		</div>
 		<div class="container">
             <h1 class="site-title">
@@ -49,14 +47,17 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo-white-EDIT.svg" alt="Topsail Logo">
                 </a>
             </h1>
+            <div class="tagline">
+					<p><?php the_field("header_text"); ?></p> 
+			</div>
           </div> <!-- end container -->
 	</header><!-- #masthead -->
      
-     <nav id="site-navigation" class="main-navigation fixed" role="navigation">
-		<button class="menu-toggle"><?php _e( 'Primary Menu', '_s' ); ?></button>
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'topsail-entertaiment' ); ?></a>
+	     <nav id="site-navigation" class="main-navigation fixed" role="navigation">
+			<button class="menu-toggle"><?php _e( '☰ Menu', '_s' ); ?></button>
+			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'topsail-entertaiment' ); ?></a>
 
-		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-	</nav><!-- #site-navigation --> 
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav><!-- #site-navigation --> 
 	
 	<div id="content" class="site-content">
