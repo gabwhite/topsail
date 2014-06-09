@@ -16,7 +16,7 @@ header {
 		background: $background-text;
 			
 			h1.site-title {
-		    max-width: 500px;
+		    max-width: 30%;
 		    margin: 0 auto;
 		    background: url(images/logo-white-EDIT.svg) no-repeat center;
 		    background-size: contain;
@@ -47,6 +47,32 @@ video, #video	 {
 	width: auto; height: auto;
 	z-index: -100;
 }
+
+/*==========  Header Responsive Styles  ==========*/
+
+@media screen and (max-width: 600px) {
+	header {
+		.container {
+			h1.site-title {
+				max-width: 50%;
+			}
+		}
+
+	}
+}
+
+@media screen and (max-width: 1020px){
+	header {
+		.container {
+			.tagline {
+				padding: 5%;
+			}
+		}
+	}
+}
+
+
+
 
 /*-----  End of HEADER STYLES  ------*/
 
@@ -115,7 +141,7 @@ footer.site-footer {
 .site-info.container {
     float: left;
     display: inline-block;
-    margin-left: 10%;
+    margin: 0 10%;
     padding: 1%;
     color: white;
 }
@@ -126,12 +152,13 @@ footer.site-footer {
 }
 
 .copyright {
-	padding-top: 1%;
+	padding: 2% 0 0 7%;
 }
 
 .logo {
 	float: right;
 	max-width: 200px;
+	padding: 0;
 }
 
 /*-----  End of Footer Styles  ------*/

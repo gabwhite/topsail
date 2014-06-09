@@ -30,7 +30,7 @@
         @include h3;
         background: darken($this-is-dark, 10%);
         display: inline-block;
-        padding: 2%;
+        padding: 2% 5%;
     
     a {
         color: white;
@@ -45,8 +45,21 @@
     }
 }
 
+/*==========  Responsive About Section  ==========*/
+@media screen and (max-width: 600px){
+    .about p {
+        line-height: 4rem;
+    }
 
-/*-----  End of FLEXSLIDER STYLES  ------*/
+    .recent-post p{
+        line-height: 3rem;
+    }
+}
+
+
+/*-----  End of ABOUT STYLES  ------*/
+
+
 /*====================================
 =            Work Section            =
 ====================================*/
@@ -65,13 +78,15 @@ ul.trailer-thumbs {
 
     li {
         display: inline;
-        //margin: 0;
-
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        
         a img{
-            width: 34.9%;
-            margin: -1%;
+            width: 33.333%;
             -webkit-filter: grayscale(100%);
             filter: grayscale;
+            vertical-align: bottom; 
         }
 
         a:hover img {
@@ -85,12 +100,10 @@ ul.trailer-thumbs {
 
 /*==========  lightbox comment block  ==========*/
 
-
 .work{
     height: 900px;
     position: relative;
 }
-
 
 .left,  .right {
     width: 48%;
@@ -106,23 +119,18 @@ ul.trailer-thumbs {
 .right {
     float: right;
 
-     h2 {
-        color: white;
-    }
-
     h3 {
-        background: darken($background-text-light, 10%);
+        @include h3;
+        background: darken($background-text-light, 20%);
         padding: 2%;
         display: inline-block;
-        margin-bottom: 5%;
+        
     }
 }
-
 
 .work {
     h2 {
         @include h2;
-        margin-bottom: 8%; 
         line-height: 6rem;
     }
 
@@ -138,25 +146,15 @@ ul.trailer-thumbs {
 
 
 .left.work-text {
-    h2{
-        color: white;
-    }
-    
     h3 {
+        @include h3;
         background: darken($background-text, 20%);
         padding: 2%;
         display: inline-block;
-        margin-bottom: 5%;
     }
 }
 
 
-// .bg-clipper {
-//     position: absolute;
-//     clip: rect(auto,auto,auto,auto);
-//     width: 100%;
-//     height: 100%;
-// }
 
 .work.trailer-park {
     background: url(images/tpb-background.png) no-repeat left top;
@@ -164,51 +162,60 @@ ul.trailer-thumbs {
     background-size: cover;
 }
 
-// .static-wrap {
-//     position: static;
-// }
-
-// .rel-wrap {
-//     position: relative;
-//     min-height:900px;
-// }
-
-// .bg.trailer {
-//     background: url(images/tpb-background.png) no-repeat left top;
-//     position: fixed;
-//     background-size: cover; 
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     bottom: 0;
-//     z-index: -150;
-// }
 
 .work.mr-d {
     background: url(images/mrd-background.png) no-repeat left;
-    background-attachment: fixed !important;
-    background-size: cover !important;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-// .bg.mrd{
-//     background: url(images/mrd-background.png) no-repeat left;
-//     position: fixed;
-//     background-size: cover; 
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     bottom: 0;
-//     z-index: -150;
-// }
+/*==========  Responsive WORK section  ==========*/
 
+@media screen and (max-width: 1020px){
+        .left, .right {
+            width: 100%;
+
+            p {
+                line-height: 4rem;
+            }
+        }
+
+        .work-text {
+            margin-top: 15%;
+        }
+}
+
+@media screen and (max-width: 600px){
+    .work {
+        max-height: 900px;
+    }
+
+    .work.mr-d, .work.trailer-park {
+        background-attachment: scroll;
+    }
+
+    ul.trailer-thumbs li {
+        display: block;
+         width: 100%;
+
+        a img {
+            width: 100%;
+            margin: -1% 0;
+        }
+    }
+}
 
 /*-----  End of Work Section  ------*/
+
+
+
 /*=======================================
 =            Contact Section            =
 =======================================*/
 .contact {
    background: url(images/old_map.png);
    background-size: cover;
+   background-attachment: fixed;
    width: 100%;
    min-height: 900px;
 
@@ -228,7 +235,7 @@ ul.trailer-thumbs {
             margin: 1% 0;
             text-align: left;
             color: white;
-            margin-bottom: 10%;
+            margin-bottom: 2%;
         }
 
         p {
@@ -237,6 +244,17 @@ ul.trailer-thumbs {
         }
 }
 
+/*==========  Responsive CONTACT section  ==========*/
+@media screen and (max-width: 1020px){
+    .contact {
+        background-attachment: scroll;
+        
+        .left, .right {
+            width: 100%;
+            margin: 0 0 5% 0;
+        }
+    } 
+}
 
 
 /*-----  End of Contact Section  ------*/

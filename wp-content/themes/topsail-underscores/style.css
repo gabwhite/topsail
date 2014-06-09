@@ -153,10 +153,10 @@ a img {
   height: 40px; }
 
 a.myNext {
-  background: url(images/right_arrow.png);
+  content: url(images/right_arrow.png);
   background-size: contain;
   position: absolute;
-  top: 175px;
+  top: 45%;
   right: -80px;
   width: 40px;
   height: 40px;
@@ -169,19 +169,27 @@ a.myNext {
   visibility: hidden; }
 
 .myPrev {
-  background: url(images/left_arrow.png);
+  content: url(images/left_arrow.png);
   background-size: contain;
   position: absolute;
-  top: 175px;
+  top: 45%;
   left: -80px;
   width: 40px;
   height: 40px;
-  opacity: 0; }
+  opacity: 0.5; }
   .myPrev:hover {
-    left: -50px;
     opacity: 1;
-    transition: right 0.5s; }
+    transition: opacity 0.5s; }
 
+/*==========  Button: responsive  ==========*/
+@media screen and (max-width: 750px) {
+  .myPrev {
+    left: 0px;
+    background: #0d649a; }
+
+  a.myNext {
+    right: 0px;
+    background: #0d649a; } }
 /*-----  End of Buttons  ------*/
 /*--------------------------------------------------------------
 2.1 Typography
@@ -192,6 +200,7 @@ select {
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   margin: 0;
+  padding: 0;
   max-width: 100%; }
 
 h1, h2, h2.entry-title, h2.comments-title, h3, h4, h5, h6 {
@@ -200,7 +209,9 @@ h1, h2, h2.entry-title, h2.comments-title, h3, h4, h5, h6 {
 h2, h2.entry-title, h2.comments-title {
   font-size: 7rem;
   font-family: "Proxima-Nova", sans-serif;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-bottom: 4%;
+  color: white; }
 
 h2.entry-title, h2.comments-title {
   font-size: 4rem;
@@ -213,7 +224,8 @@ h3 {
   color: white;
   text-transform: uppercase;
   letter-spacing: 2px;
-  display: inline-block; }
+  display: inline-block;
+  margin-bottom: 10%; }
 
 p {
   font-size: 1.6rem; }
@@ -290,7 +302,7 @@ header {
     padding-top: 2%;
     background: rgba(13, 100, 154, 0.85); }
     header .container h1.site-title {
-      max-width: 500px;
+      max-width: 30%;
       margin: 0 auto;
       background: url(images/logo-white-EDIT.svg) no-repeat center;
       background-size: contain;
@@ -314,6 +326,13 @@ video, #video {
   height: auto;
   z-index: -100; }
 
+/*==========  Header Responsive Styles  ==========*/
+@media screen and (max-width: 600px) {
+  header .container h1.site-title {
+    max-width: 50%; } }
+@media screen and (max-width: 1020px) {
+  header .container .tagline {
+    padding: 5%; } }
 /*-----  End of HEADER STYLES  ------*/
 .container {
   margin: 0 auto;
@@ -376,7 +395,7 @@ footer.site-footer {
 .site-info.container {
   float: left;
   display: inline-block;
-  margin-left: 10%;
+  margin: 0 10%;
   padding: 1%;
   color: white; }
 
@@ -385,11 +404,12 @@ footer.site-footer {
   display: inline-block; }
 
 .copyright {
-  padding-top: 1%; }
+  padding: 2% 0 0 7%; }
 
 .logo {
   float: right;
-  max-width: 200px; }
+  max-width: 200px;
+  padding: 0; }
 
 /*-----  End of Footer Styles  ------*/
 /*--------------------------------------------------------------
@@ -601,12 +621,12 @@ nav.main-navigation {
 .fixed {
   position: fixed;
   bottom: 0;
-  padding: 2%; }
+  padding: 2% 0; }
 
 .absolute {
   position: absolute;
   bottom: 0;
-  padding: 2%; }
+  padding: 2% 0; }
 
 .sticky {
   transition: padding 0.5s;
@@ -659,7 +679,16 @@ nav.main-navigation a {
 .main-navigation ul li:hover > ul {
   display: block; }
 
-/* Small menu */
+/*=====================================================
+=            Menu positioning : Responsive            =
+=====================================================*/
+@media screen and (max-width: 1500px) {
+  .fixed, .absolute {
+    position: relative; } }
+/*-----  End of Menu positioning : Responsive  ------*/
+/*=============================================
+=            Small Menu            =
+=============================================*/
 .menu-toggle {
   display: none; }
 
@@ -672,16 +701,35 @@ nav.main-navigation a {
     text-transform: uppercase;
     letter-spacing: 2px;
     display: inline-block;
+    margin-bottom: 10%;
     display: block;
     background: none;
     box-shadow: none;
     border: 0;
     color: #0d649a;
     margin: 0 auto;
-    font-size: 2rem; }
+    font-size: 2rem;
+    padding-bottom: 3%; }
+    .menu-toggle:hover, .menu-toggle:focus,
+    .main-navigation.toggled .nav-menu:hover,
+    .main-navigation.toggled .nav-menu:focus {
+      color: #cb5b21;
+      box-shadow: none;
+      outline: none; }
+
+  ul.menu {
+    margin: 0; }
+    ul.menu li {
+      display: block;
+      width: 100%;
+      padding: 3% 0;
+      border-top: 1px solid #636363; }
+    ul.menu li:last-child {
+      padding: 3% 0 1% 0; }
 
   .main-navigation ul {
     display: none; } }
+/*-----  End of Section comment block  ------*/
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
@@ -939,6 +987,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     font-size: 7rem;
     font-family: "Proxima-Nova", sans-serif;
     font-weight: 700;
+    margin-bottom: 4%;
+    color: white;
     margin: 2% 0;
     text-align: center;
     color: white; }
@@ -961,9 +1011,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     text-transform: uppercase;
     letter-spacing: 2px;
     display: inline-block;
+    margin-bottom: 10%;
     background: #090b10;
     display: inline-block;
-    padding: 2%; }
+    padding: 2% 5%; }
     .recent-post p a {
       color: white;
       font-weight: 700;
@@ -971,7 +1022,14 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
       .recent-post p a:hover {
         color: #cb5b21; }
 
-/*-----  End of FLEXSLIDER STYLES  ------*/
+/*==========  Responsive About Section  ==========*/
+@media screen and (max-width: 600px) {
+  .about p {
+    line-height: 4rem; }
+
+  .recent-post p {
+    line-height: 3rem; } }
+/*-----  End of ABOUT STYLES  ------*/
 /*====================================
 =            Work Section            =
 ====================================*/
@@ -985,12 +1043,15 @@ ul.trailer-thumbs {
   width: 100%;
   margin: 0; }
   ul.trailer-thumbs li {
-    display: inline; }
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-size: 0; }
     ul.trailer-thumbs li a img {
-      width: 34.9%;
-      margin: -1%;
+      width: 33.333%;
       -webkit-filter: grayscale(100%);
-      filter: grayscale; }
+      filter: grayscale;
+      vertical-align: bottom; }
     ul.trailer-thumbs li a:hover img {
       -webkit-filter: grayscale(0);
       filter: none; }
@@ -1009,19 +1070,24 @@ ul.trailer-thumbs {
 
 .right {
   float: right; }
-  .right h2 {
-    color: white; }
   .right h3 {
-    background: rgba(159, 71, 26, 0.85);
-    padding: 2%;
+    font-family: "Proxima-Nova", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     display: inline-block;
-    margin-bottom: 5%; }
+    margin-bottom: 10%;
+    background: rgba(115, 52, 19, 0.85);
+    padding: 2%;
+    display: inline-block; }
 
 .work h2 {
   font-size: 7rem;
   font-family: "Proxima-Nova", sans-serif;
   font-weight: 700;
-  margin-bottom: 8%;
+  margin-bottom: 4%;
+  color: white;
   line-height: 6rem; }
 .work p {
   margin: 1%;
@@ -1035,13 +1101,17 @@ ul.trailer-thumbs {
 .work-text {
   padding: 2%; }
 
-.left.work-text h2 {
-  color: white; }
 .left.work-text h3 {
+  font-family: "Proxima-Nova", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-bottom: 10%;
   background: rgba(5, 39, 60, 0.85);
   padding: 2%;
-  display: inline-block;
-  margin-bottom: 5%; }
+  display: inline-block; }
 
 .work.trailer-park {
   background: url(images/tpb-background.png) no-repeat left top;
@@ -1050,9 +1120,31 @@ ul.trailer-thumbs {
 
 .work.mr-d {
   background: url(images/mrd-background.png) no-repeat left;
-  background-attachment: fixed !important;
-  background-size: cover !important; }
+  background-attachment: fixed;
+  background-size: cover; }
 
+/*==========  Responsive WORK section  ==========*/
+@media screen and (max-width: 1020px) {
+  .left, .right {
+    width: 100%; }
+    .left p, .right p {
+      line-height: 4rem; }
+
+  .work-text {
+    margin-top: 15%; } }
+@media screen and (max-width: 600px) {
+  .work {
+    max-height: 900px; }
+
+  .work.mr-d, .work.trailer-park {
+    background-attachment: scroll; }
+
+  ul.trailer-thumbs li {
+    display: block;
+    width: 100%; }
+    ul.trailer-thumbs li a img {
+      width: 100%;
+      margin: -1% 0; } }
 /*-----  End of Work Section  ------*/
 /*=======================================
 =            Contact Section            =
@@ -1060,6 +1152,7 @@ ul.trailer-thumbs {
 .contact {
   background: url(images/old_map.png);
   background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   min-height: 900px; }
   .contact .left {
@@ -1074,7 +1167,7 @@ ul.trailer-thumbs {
     margin: 1% 0;
     text-align: left;
     color: white;
-    margin-bottom: 10%; }
+    margin-bottom: 2%; }
   .contact p {
     font-family: "Abril Text", Georgia, serif;
     font-size: 2rem;
@@ -1084,6 +1177,13 @@ ul.trailer-thumbs {
     font-style: normal;
     color: white; }
 
+/*==========  Responsive CONTACT section  ==========*/
+@media screen and (max-width: 1020px) {
+  .contact {
+    background-attachment: scroll; }
+    .contact .left, .contact .right {
+      width: 100%;
+      margin: 0 0 5% 0; } }
 /*-----  End of Contact Section  ------*/
 /*=============================================
 =            Single page blog post            =
@@ -1100,6 +1200,7 @@ header.entry-header {
     text-transform: uppercase;
     letter-spacing: 2px;
     display: inline-block;
+    margin-bottom: 10%;
     background: #cb5b21;
     padding: 1%;
     font-size: 1.2rem;

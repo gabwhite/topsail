@@ -14,13 +14,13 @@ nav.main-navigation {
 .fixed {
 	position: fixed;
 	bottom: 0;
-	padding: 2%;
+	padding: 2% 0;
 }
 
 .absolute {
 	position: absolute;
 	bottom:0;
-	padding: 2%;
+	padding: 2% 0;
 	
 }
 
@@ -92,6 +92,20 @@ nav.main-navigation a {
 .main-navigation .current-menu-item a {
 }
 
+/*=====================================================
+=            Menu positioning : Responsive            =
+=====================================================*/
+
+@media screen and (max-width: 1500px){
+	.fixed, .absolute {
+		position: relative;
+	}
+}
+
+/*-----  End of Menu positioning : Responsive  ------*/
+
+
+
 
 /*=============================================
 =            Small Menu            =
@@ -111,10 +125,37 @@ nav.main-navigation a {
 		color: $background-opaque;
 		margin: 0 auto;
 		font-size: 2rem;
+		padding-bottom: 3%;
+
+
+		&:hover, &:focus {
+			color: $main-accent;
+			box-shadow: none;
+			outline: none;
+		}
 	}
 
+	ul.menu {
+		margin: 0;
+
+		li {
+			display: block;
+			width: 100%;
+			padding: 3% 0;
+			border-top: 1px solid $body;
+		}
+
+		li:last-child {
+			padding: 3% 0 1% 0;
+		}
+	}
+	
 	.main-navigation ul {
 		display: none;
+
+
+
+		
 	}
 }
 

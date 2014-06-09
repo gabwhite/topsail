@@ -41,14 +41,14 @@
 		<div class="header-widget">
 			<?php dynamic_sidebar('extra-widget-area'); ?>
 		</div>
-		<div class="container">
+		<div class="container clearfix">
             <h1 class="site-title">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>                    
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo-white-EDIT.svg" alt="Topsail Logo">
                 </a>
             </h1>
             <div class="tagline">
-					<p><?php the_field("header_text"); ?></p> 
+					<p><?php bloginfo("description"); ?></p> 
 			</div>
           </div> <!-- end container -->
 	</header><!-- #masthead -->
