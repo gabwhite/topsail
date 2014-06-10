@@ -38,7 +38,7 @@ header {
 }
 
 .header-widget {
-	max-height: 875px;
+	max-height: 850px;
 	overflow: hidden;
 }
 
@@ -52,12 +52,25 @@ video, #video	 {
 
 @media screen and (max-width: 600px) {
 	header {
+		min-height: 500px;
+		background: url(images/trailer-park-boys.jpg) center;
+		background-size: cover;
+
+		video {
+			display: none;
+		}
+
 		.container {
 			h1.site-title {
 				max-width: 50%;
 			}
-		}
 
+			.tagline {
+				p {
+					line-height: 2.5rem;
+				}
+			}
+		}
 	}
 }
 
@@ -130,6 +143,15 @@ th {
 	font-weight: bold;
 }
 
+/*==========  Responsive Elements  ==========*/
+
+@media screen and (max-width: 600px){
+	.container{
+		width: 90%;
+		padding: 2%;
+	}
+}
+
 
 /*=====================================
 =            Footer Styles            =
@@ -138,27 +160,54 @@ footer.site-footer {
     background: darken($this-is-dark, 10%);
 }
 
-.site-info.container {
+.site-info {
     float: left;
     display: inline-block;
     margin: 0 10%;
     padding: 1%;
+    width: 80%;
     color: white;
 }
 
 .copyright, .logo {
 	width: 33%;
+	margin: 0 5%;
 	display: inline-block;
 }
 
-.copyright {
-	padding: 2% 0 0 7%;
+.logo {
+	max-width: 200px;
+	padding-top: 0.5%;
 }
 
-.logo {
+.copyright {
+	padding: 2% 0;
 	float: right;
-	max-width: 200px;
-	padding: 0;
+
+	p {
+		float: right;
+	}
+}
+
+/*==========  Responsive Footer  ==========*/
+@media screen and (max-width: 600px){
+	footer {
+		padding: 3% 0;
+
+		.copyright, .logo {
+			width: 100%;
+			float: left;
+		}
+
+		.copyright {
+			margin-left: 8%;
+			float: left;
+
+			p {
+				float: left;
+			}
+		}
+	}
 }
 
 /*-----  End of Footer Styles  ------*/

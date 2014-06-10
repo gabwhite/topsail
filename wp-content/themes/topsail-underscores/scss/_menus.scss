@@ -97,8 +97,8 @@ nav.main-navigation a {
 =====================================================*/
 
 @media screen and (max-width: 1500px){
-	.fixed, .absolute {
-		position: relative;
+	.fixed {
+		position: absolute;
 	}
 }
 

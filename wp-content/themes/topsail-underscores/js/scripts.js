@@ -1,6 +1,6 @@
 
 // DOC READY
-$(function(){
+jQuery(function($){
 
 $(".fancybox")
 	//.attr('rel', 'gallery')

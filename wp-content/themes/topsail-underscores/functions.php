@@ -100,11 +100,28 @@ if (function_exists('register_sidebar')) {
  * Enqueue scripts and styles.
  */
 function _s_scripts() {
+
+
+	wp_enqueue_style("fancybox-style", get_template_directory_uri() ."/fancybox/source/jquery.fancybox.css?v=2.1.5" );
+
+	wp_enqueue_style("fancybox-style-buttons", get_template_directory_uri(). "/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5");
+
+	wp_enqueue_style("fancybox-style-thumbs", get_template_directory_uri(). "/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7");
+	
 	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
 
-	
+	wp_enqueue_script("fancybox-jquery", get_template_directory_uri(). "/fancybox/source/jquery.fancybox.pack.js?v=2.1.5", array("jquery"));
+
+	wp_enqueue_script("fancybox-helpers-buttons", get_template_directory_uri(). "/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5");
+
+	wp_enqueue_script("fancybox-helpers-media", get_template_directory_uri(). "/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6");
+
+	wp_enqueue_script("fancybox-helpers-thumbs", get_template_directory_uri(). "/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7");
 
 	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+
+	wp_enqueue_script('scripts-custom', get_template_directory_uri(). "/js/scripts.js", array("jquery"), false);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

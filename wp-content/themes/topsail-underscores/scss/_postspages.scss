@@ -19,6 +19,7 @@
      p {
         @include body-text;
         color: white;
+        padding: 10% 0;
      }
 }
 
@@ -48,7 +49,7 @@
 /*==========  Responsive About Section  ==========*/
 @media screen and (max-width: 600px){
     .about p {
-        line-height: 4rem;
+        @include body-mobile;
     }
 
     .recent-post p{
@@ -140,10 +141,6 @@ ul.trailer-thumbs {
     }
 }
 
-.work-text {
-    padding: 2%;
-}
-
 
 .left.work-text {
     h3 {
@@ -153,8 +150,6 @@ ul.trailer-thumbs {
         display: inline-block;
     }
 }
-
-
 
 .work.trailer-park {
     background: url(images/tpb-background.png) no-repeat left top;
@@ -186,12 +181,22 @@ ul.trailer-thumbs {
 }
 
 @media screen and (max-width: 600px){
+    .left, .right {
+        p {
+            @include body-mobile;
+        }
+    }
+
     .work {
-        max-height: 900px;
+        max-height: 800px;
     }
 
     .work.mr-d, .work.trailer-park {
         background-attachment: scroll;
+    }
+
+    .work.mr-d {
+        background-position: center;
     }
 
     ul.trailer-thumbs li {
@@ -251,7 +256,12 @@ ul.trailer-thumbs {
         
         .left, .right {
             width: 100%;
-            margin: 0 0 5% 0;
+            margin: 15% 0 5% 0;
+        }
+
+
+        p {
+            @include body-mobile;
         }
     } 
 }
@@ -351,13 +361,12 @@ header.entry-header {
     }
 }
 
+/*==========  Responsive Blog Styles  ==========*/
+
+
+
 /*-----  End of Single page blog post  ------*/
 
-
-
-
-.sticky {
-}
 .hentry {
 	margin: 0;
 }

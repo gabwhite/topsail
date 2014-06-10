@@ -28,6 +28,11 @@ $body-font : "Abril Text", Georgia, serif;
     font-style: normal;
 }
 
+@mixin body-mobile {
+	font-size: 1.6rem;
+	line-height: 3rem;
+}
+
 /*-----  End of FONTS  ------*/
 
 @mixin h3 {

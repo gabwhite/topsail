@@ -12,12 +12,13 @@
 
 	<footer id="colophon" class="site-footer clearfix" role="contentinfo">
 		<div class="site-info container">
-			<div class="copyright">
-				<p>Copyright Topsail Entertainment <?php echo date('Y'); ?></p>
-			</div>
 
 			<div class="logo">
 				<img src="<?php echo get_template_directory_uri(); ?>/images/logo-white-horiz.svg" alt="Topsail Logo">
+			</div>
+			
+			<div class="copyright">
+				<p>Copyright Topsail Entertainment <?php echo date('Y'); ?></p>
 			</div>
 
 		</div><!-- .site-info -->

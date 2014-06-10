@@ -317,7 +317,7 @@ header {
       padding: 5% 10%; }
 
 .header-widget {
-  max-height: 875px;
+  max-height: 850px;
   overflow: hidden; }
 
 video, #video {
@@ -328,8 +328,16 @@ video, #video {
 
 /*==========  Header Responsive Styles  ==========*/
 @media screen and (max-width: 600px) {
-  header .container h1.site-title {
-    max-width: 50%; } }
+  header {
+    min-height: 500px;
+    background: url(images/trailer-park-boys.jpg) center;
+    background-size: cover; }
+    header video {
+      display: none; }
+    header .container h1.site-title {
+      max-width: 50%; }
+    header .container .tagline p {
+      line-height: 2.5rem; } }
 @media screen and (max-width: 1020px) {
   header .container .tagline {
     padding: 5%; } }
@@ -386,31 +394,52 @@ table {
 th {
   font-weight: bold; }
 
+/*==========  Responsive Elements  ==========*/
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 2%; } }
 /*=====================================
 =            Footer Styles            =
 =====================================*/
 footer.site-footer {
   background: #090b10; }
 
-.site-info.container {
+.site-info {
   float: left;
   display: inline-block;
   margin: 0 10%;
   padding: 1%;
+  width: 80%;
   color: white; }
 
 .copyright, .logo {
   width: 33%;
+  margin: 0 5%;
   display: inline-block; }
 
-.copyright {
-  padding: 2% 0 0 7%; }
-
 .logo {
-  float: right;
   max-width: 200px;
-  padding: 0; }
+  padding-top: 0.5%; }
 
+.copyright {
+  padding: 2% 0;
+  float: right; }
+  .copyright p {
+    float: right; }
+
+/*==========  Responsive Footer  ==========*/
+@media screen and (max-width: 600px) {
+  footer {
+    padding: 3% 0; }
+    footer .copyright, footer .logo {
+      width: 100%;
+      float: left; }
+    footer .copyright {
+      margin-left: 8%;
+      float: left; }
+      footer .copyright p {
+        float: left; } }
 /*-----  End of Footer Styles  ------*/
 /*--------------------------------------------------------------
 4.0 Forms
@@ -683,8 +712,8 @@ nav.main-navigation a {
 =            Menu positioning : Responsive            =
 =====================================================*/
 @media screen and (max-width: 1500px) {
-  .fixed, .absolute {
-    position: relative; } }
+  .fixed {
+    position: absolute; } }
 /*-----  End of Menu positioning : Responsive  ------*/
 /*=============================================
 =            Small Menu            =
@@ -999,7 +1028,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     letter-spacing: 1px;
     font-weight: 400;
     font-style: normal;
-    color: white; }
+    color: white;
+    padding: 10% 0; }
 
 .recent-post {
   text-align: center;
@@ -1025,7 +1055,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 /*==========  Responsive About Section  ==========*/
 @media screen and (max-width: 600px) {
   .about p {
-    line-height: 4rem; }
+    font-size: 1.6rem;
+    line-height: 3rem; }
 
   .recent-post p {
     line-height: 3rem; } }
@@ -1098,9 +1129,6 @@ ul.trailer-thumbs {
   font-weight: 400;
   font-style: normal; }
 
-.work-text {
-  padding: 2%; }
-
 .left.work-text h3 {
   font-family: "Proxima-Nova", sans-serif;
   font-size: 1.5rem;
@@ -1133,11 +1161,18 @@ ul.trailer-thumbs {
   .work-text {
     margin-top: 15%; } }
 @media screen and (max-width: 600px) {
+  .left p, .right p {
+    font-size: 1.6rem;
+    line-height: 3rem; }
+
   .work {
-    max-height: 900px; }
+    max-height: 800px; }
 
   .work.mr-d, .work.trailer-park {
     background-attachment: scroll; }
+
+  .work.mr-d {
+    background-position: center; }
 
   ul.trailer-thumbs li {
     display: block;
@@ -1183,7 +1218,10 @@ ul.trailer-thumbs {
     background-attachment: scroll; }
     .contact .left, .contact .right {
       width: 100%;
-      margin: 0 0 5% 0; } }
+      margin: 15% 0 5% 0; }
+    .contact p {
+      font-size: 1.6rem;
+      line-height: 3rem; } }
 /*-----  End of Contact Section  ------*/
 /*=============================================
 =            Single page blog post            =
@@ -1267,6 +1305,7 @@ header.entry-header {
     .entry-footer.container a:hover {
       color: #0d649a; }
 
+/*==========  Responsive Blog Styles  ==========*/
 /*-----  End of Single page blog post  ------*/
 .hentry {
   margin: 0; }
